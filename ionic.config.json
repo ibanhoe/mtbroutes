@@ -1,0 +1,7 @@
+{
+  "name": "mtbroutes",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
