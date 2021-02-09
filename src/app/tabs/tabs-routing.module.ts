@@ -8,10 +8,6 @@ const routes: Routes = [
     component: TabsPage,
     children: [
       {
-        path: 'upload',
-        loadChildren: () => import('../upload/upload.module').then(m => m.UploadPageModule)
-      },
-      {
         path: 'navigate',
         loadChildren: () => import('../navigate/navigate.module').then(m => m.NavigatePageModule)
       },
@@ -21,14 +17,14 @@ const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: '/tabs/upload',
+        redirectTo: '/tabs/navigate',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/upload',
+    redirectTo: '/tabs/navigate',
     pathMatch: 'full'
   }
 ];

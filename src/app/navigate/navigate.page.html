@@ -13,8 +13,20 @@
     </ion-toolbar>
   </ion-header>
 
+  <ion-list>
+    <ion-item>
+      <ion-select placeholder="Select Path" [(ngModel)]="option" (ngModelChange)="selectPath()">
+        <ion-select-option value="1">Casa</ion-select-option>
+        <ion-select-option value="2">Xitle</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
   <div #mapElement class="map"></div>
 
- 
-  
+  <ion-button [hidden]="isStarted" expand="full" (click)="startTracking()">Start Tracking</ion-button>
+  <ion-button [hidden]="isStopped" class="wide50" color="warning" (click)="pauseTracking()">Pause Tracking
+  </ion-button>
+  <ion-button [hidden]="isStopped" class="wide50" color="danger" (click)="stopTracking()">Stop Tracking</ion-button>
+
 </ion-content>
